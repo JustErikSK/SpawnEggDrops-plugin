@@ -1,8 +1,7 @@
 package me.minecraft.plugin;
 
-import net.kyori.adventure.text.format.NamedTextColor;
-import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
@@ -18,7 +17,7 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        Bukkit.getConsoleSender().sendMessage(TextColor.color(NamedTextColor.DARK_GREEN) + "SpawnEggDrops >> Plugin has been enabled!");
+        Bukkit.getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "SpawnEggDrops >> Plugin has been enabled!");
         this.getServer().getPluginManager().registerEvents(this, this);
     }
 
