@@ -84,7 +84,7 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
             e.getDrops().add(new ItemStack(Material.ZOMBIE_SPAWN_EGG));
         } else if (ent.getType() == EntityType.ZOMBIE_VILLAGER && num < 10) {
             e.getDrops().add(new ItemStack(Material.ZOMBIE_VILLAGER_SPAWN_EGG));
-        } else if (ent.getType() == EntityType.CREAKING && num < 2) {
+        } else if (ent.getType() == EntityType.CREAKING && num < 10) {
             e.getDrops().add(new ItemStack(Material.CREAKING_SPAWN_EGG));
         }
 
