@@ -1,0 +1,13 @@
+# Configuration file for SpawnEggDrops plugin
+# You can set your own drop percentages and drop amounts here
+# If you set a number that's more/less than the set maximum/minimum, plugin will automatically use the default value
+
+# SPAWN EGG DROP PERCENTAGE
+# This will apply to all drops
+# (Default = 10; Min = 1; Max = 100)
+spawn_egg_drop_percentage: 10
+
+# SPAWN EGG DROP AMOUNT
+# This will apply to all drops
+# (Default = 1; Min = 1; Max = 10)
+spawn_egg_drop_amount: 1
