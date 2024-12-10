@@ -1,5 +1,5 @@
 # SpawnEggDrops Plugin
-This plugin makes all mobs (hostile, neutral and passive) drop their spawn egg on death. Be aware, there's not 100% chance for this, all mobs have 10% chance except the Warden which has 25%!
+This plugin makes all mobs (hostile, neutral and passive) drop their spawn egg on death. There is a 10% for 1 drop by default, this can be changed in configuration file!
 
 **INSTALLATION:**
 1. Use one of these options to download SpawnEggDrops plugin:
