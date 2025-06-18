@@ -166,6 +166,8 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
                 e.getDrops().add(new ItemStack(Material.FROG_SPAWN_EGG, sed_am));
             } else if (ent.getType() == EntityType.GLOW_SQUID) {
                 e.getDrops().add(new ItemStack(Material.GLOW_SQUID_SPAWN_EGG, sed_am));
+            } else if (ent.getType() == EntityType.HAPPY_GHAST) {
+                e.getDrops().add(new ItemStack(Material.HAPPY_GHAST_SPAWN_EGG));
             } else if (ent.getType() == EntityType.HORSE) {
                 e.getDrops().add(new ItemStack(Material.HORSE_SPAWN_EGG, sed_am));
             } else if (ent.getType() == EntityType.MOOSHROOM) {
