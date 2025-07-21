@@ -12,6 +12,6 @@ spawn_egg_drop_percentage: 10
 # (Default = 1; Min = 1; Max = 10)
 spawn_egg_drop_amount: 1
 
-# Last updated for SpawnEggDrops v1.1.4
-# Version 1.1.4 works for MC versions 1.21 - 1.21.7
+# Last updated for SpawnEggDrops v1.1.5
+# Version 1.1.5 works for MC versions 1.21 - 1.21.8
 # End of config file
