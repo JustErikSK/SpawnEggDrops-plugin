@@ -12,5 +12,10 @@ spawn_egg_drop_percentage: 10
 # (Default = 1; Min = 1; Max = 10)
 spawn_egg_drop_amount: 1
 
-# Version 1.1.7 works for MC versions 1.21 - 1.21.9
+# DROPS FROM MOBS SPAWNED FROM SPAWNERS
+# This will apply to all drops for mobs from spawners
+# (Default = true; Options = true / false)
+drops_from_spawners: true
+
+# Version 1.2 works for MC versions 1.21 - 1.21.9
 # End of config file
