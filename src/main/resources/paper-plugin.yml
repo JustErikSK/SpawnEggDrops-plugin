@@ -1,5 +1,5 @@
 name: SpawnEggDrops
-version: '1.2'
+version: '1.2.1'
 main: me.minecraft.plugin.SpawnEggDrops
 api-version: '1.21'
 authors: [ JustErikSK ]
