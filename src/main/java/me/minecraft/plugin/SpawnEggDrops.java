@@ -135,6 +135,14 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
                 e.getDrops().add(new ItemStack(Material.ZOMBIE_VILLAGER_SPAWN_EGG, dropAmount));
             } else if (ent.getType() == EntityType.CREAKING) {
                 e.getDrops().add(new ItemStack(Material.CREAKING_SPAWN_EGG, dropAmount));
+            } else if (ent.getType() == EntityType.CAMEL_HUSK) {
+                e.getDrops().add(new ItemStack(Material.CAMEL_HUSK_SPAWN_EGG, dropAmount));
+            } else if (ent.getType() == EntityType.PARCHED) {
+                e.getDrops().add(new ItemStack(Material.PARCHED_SPAWN_EGG, dropAmount));
+            } else if (ent.getType() == EntityType.ZOMBIE_NAUTILUS) {
+                e.getDrops().add(new ItemStack(Material.ZOMBIE_NAUTILUS_SPAWN_EGG, dropAmount));
+            } else if (ent.getType() == EntityType.ZOMBIE_HORSE) {
+                e.getDrops().add(new ItemStack(Material.ZOMBIE_HORSE_SPAWN_EGG, dropAmount));
             }
 
             // NEUTRAL MOBS
@@ -170,6 +178,8 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
                 e.getDrops().add(new ItemStack(Material.WOLF_SPAWN_EGG, dropAmount));
             } else if (ent.getType() == EntityType.ZOMBIFIED_PIGLIN) {
                 e.getDrops().add(new ItemStack(Material.ZOMBIFIED_PIGLIN_SPAWN_EGG, dropAmount));
+            } else if (ent.getType() == EntityType.NAUTILUS) {
+                e.getDrops().add(new ItemStack(Material.NAUTILUS_SPAWN_EGG, dropAmount));
             }
 
             // PASSIVE MOBS
