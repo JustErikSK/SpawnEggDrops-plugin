@@ -17,7 +17,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Random;
+import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public final class SpawnEggDrops extends JavaPlugin implements Listener {
@@ -36,6 +36,7 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
         config.addDefault("spawn_egg_drop_percentage", 10);
         config.addDefault("spawn_egg_drop_amount", 1);
         config.addDefault("drops_from_spawners", true);
+        config.addDefault("blacklisted_mobs", Arrays.asList("PLAYER"));
         getConfig().options().copyDefaults(true);
         saveConfig();
     }
@@ -65,6 +66,15 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
         return egg;
     }
 
+    private boolean isBlacklisted(EntityType type) {
+        for (String mobName : getConfig().getStringList("blacklisted_mobs")) {
+            if (mobName.equalsIgnoreCase(type.name())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @EventHandler
     public void mobDeath(EntityDeathEvent e) {
         LivingEntity ent = e.getEntity();
@@ -83,7 +93,7 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
         if (roll <= dropPercentage) {
             Material eggMat = getSpawnEggMaterial(ent.getType());
             if (eggMat == null) return;
-            if (ent.getType() == EntityType.PLAYER) return;
+            if (isBlacklisted(ent.getType())) return;
 
             e.getDrops().add(new ItemStack(eggMat, dropAmount));
         }

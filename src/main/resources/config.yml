@@ -17,5 +17,15 @@ spawn_egg_drop_amount: 1
 # (Default = true; Options = true / false)
 drops_from_spawners: true
 
-# Version 1.2.2 works for MC versions 1.21 - 1.21.11
+# BLACKLIST FOR MOBS
+# You can blacklist the spawn egg drop for any mob here, here's an example of how blacklisting works:
+#   blacklisted_mobs:
+#    - PLAYER
+#    - ZOMBIE
+#    - ENDER_DRAGON
+# If you use an invalid mob name, it will just be ignored.
+blacklisted_mobs:
+  - PLAYER
+
+# Version 1.3 works for MC versions 26.1 - 26.1.1
 # End of config file
