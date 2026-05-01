@@ -1,0 +1,31 @@
+# Configuration file for SpawnEggDrops plugin
+# You can set your own drop percentages and drop amounts here
+# If you set a number that's more/less than the set maximum/minimum, plugin will automatically use the default value
+
+# SPAWN EGG DROP PERCENTAGE
+# This will apply to all drops
+# (Default = 10; Min = 1; Max = 100)
+spawn_egg_drop_percentage: 10
+
+# SPAWN EGG DROP AMOUNT
+# This will apply to all drops
+# (Default = 1; Min = 1; Max = 10)
+spawn_egg_drop_amount: 1
+
+# DROPS FROM MOBS SPAWNED FROM SPAWNERS
+# This will apply to all drops for mobs from spawners
+# (Default = true; Options = true / false)
+drops_from_spawners: true
+
+# BLACKLIST FOR MOBS
+# You can blacklist the spawn egg drop for any mob here, here's an example of how blacklisting works:
+#   blacklisted_mobs:
+#    - PLAYER
+#    - ZOMBIE
+#    - ENDER_DRAGON
+# If you use an invalid mob name, it will just be ignored.
+blacklisted_mobs:
+  - PLAYER
+
+# Version 1.3_1.21 works for MC versions 1.21 - 1.21.11
+# End of config file
