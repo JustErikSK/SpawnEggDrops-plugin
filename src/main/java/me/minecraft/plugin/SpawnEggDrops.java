@@ -22,6 +22,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public final class SpawnEggDrops extends JavaPlugin implements Listener {
 
+    private static final double DEFAULT_DROP_PERCENTAGE = 10.0;
+    private static final double MIN_DROP_PERCENTAGE = 0.0001;
+    private static final double MAX_DROP_PERCENTAGE = 100.0;
+
     private NamespacedKey FROM_SPAWNER;
 
     @Override
@@ -78,19 +82,19 @@ public final class SpawnEggDrops extends JavaPlugin implements Listener {
     @EventHandler
     public void mobDeath(EntityDeathEvent e) {
         LivingEntity ent = e.getEntity();
-        int roll = ThreadLocalRandom.current().nextInt(100);
+        double roll = ThreadLocalRandom.current().nextDouble(100.0);
 
         boolean allowSpawnerDrops = this.getConfig().getBoolean("drops_from_spawners", true);
         boolean fromSpawner = ent.getPersistentDataContainer().has(FROM_SPAWNER, PersistentDataType.BYTE);
 
         if (fromSpawner && !allowSpawnerDrops) return;
 
-        int dropPercentage = this.getConfig().getInt("spawn_egg_drop_percentage", 10);
+        double dropPercentage = this.getConfig().getDouble("spawn_egg_drop_percentage", DEFAULT_DROP_PERCENTAGE);
         int dropAmount = this.getConfig().getInt("spawn_egg_drop_amount", 1);
-        if (dropPercentage > 100 || dropPercentage < 1) { dropPercentage = 10; }
+        if (dropPercentage > MAX_DROP_PERCENTAGE || dropPercentage < MIN_DROP_PERCENTAGE) { dropPercentage = DEFAULT_DROP_PERCENTAGE; }
         if (dropAmount > 10 || dropAmount < 1) { dropAmount = 1; }
 
-        if (roll <= dropPercentage) {
+        if (roll < dropPercentage) {
             Material eggMat = getSpawnEggMaterial(ent.getType());
             if (eggMat == null) return;
             if (isBlacklisted(ent.getType())) return;
