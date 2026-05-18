@@ -4,7 +4,7 @@
 
 # SPAWN EGG DROP PERCENTAGE
 # This will apply to all drops
-# (Default = 10; Min = 1; Max = 100)
+# (Default = 10; Min = 0.0001; Max = 100)
 spawn_egg_drop_percentage: 10
 
 # SPAWN EGG DROP AMOUNT
@@ -27,5 +27,5 @@ drops_from_spawners: true
 blacklisted_mobs:
   - PLAYER
 
-# Version 1.3_1.21 works for MC versions 1.21 - 1.21.11
+# Version 1.4_1.21 works for MC versions 1.21 - 1.21.11
 # End of config file
