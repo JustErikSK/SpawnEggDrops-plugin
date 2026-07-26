@@ -1,6 +1,6 @@
 name: SpawnEggDrops
-version: 1.4
+version: 1.4.1
 main: me.minecraft.plugin.SpawnEggDrops
-api-version: 26.1
+api-version: 26.2
 authors: [ JustErikSK ]
 folia-supported: true
