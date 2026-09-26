@@ -12,4 +12,4 @@ You can find detailed information about this plugin on our Wiki https://with-rag
 2. Drop the file in your server's plugins folder and start your server, plugin will automatically load.
 3. After first server start with our plugin, new folder with a config file will be created in your server's plugins folder. You can change the drop percentage and drop amount there. Drop percentage supports decimal values from 0.0001 to 100.
 
-This plugin works on Minecraft versions 1.21 - 26.2 _(the newest version work only on 26.2)_
+This plugin works on Minecraft versions 1.21 - 26.3 _(the newest version work only on 26.3)_
